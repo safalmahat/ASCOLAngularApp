@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using BusinessLogicLayer.Service;
 using DataAccessLayer.Model;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -19,6 +20,7 @@ namespace AngularCoreApp.Controllers
             _studentService = studentService;
         }
         [HttpGet]
+        [Authorize(Roles ="Student,Admin")]
         public IActionResult GetAllStudent()
         {
 

@@ -19,7 +19,8 @@ namespace DataAccessLayer
         }
         public SqlConnection GetConnection()
         {
-            return this._sqlConnection;
+            _sqlConnection = new SqlConnection(strConnection);
+            return _sqlConnection;
         }
     }
 }

@@ -18,6 +18,10 @@ namespace AngularCoreApp
             services.AddScoped<ITeacherService, TeacherService>();
             services.AddScoped<ITeacherRepo, TeacherRepo>();
             services.AddScoped<IDatabaseManager, DatabaseManager>();
+            services.AddScoped<IUserRepo, UserRepo>();
+            services.AddScoped<IUserService, UserService>();
+            services.AddScoped<IUserRoleRepo, UserRoleRepo>();
+            services.AddScoped<IUserRoleService, UserRoleService>();
         }
     }
 }
