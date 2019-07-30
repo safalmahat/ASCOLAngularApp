@@ -24,7 +24,7 @@ namespace AngularCoreApp.Controllers
         }
         public IActionResult GetUser()
         {
-            User user = new User() { UserName = "Praksh", Password = "Prakash", Address = new AddressInfo() { City = "New york", Street = "00012AA" } };
+            User user = new User() { UserName = "Praksh", Password = "Prakash"};
             return Ok(user);
         }
     }
